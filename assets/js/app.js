@@ -12,3 +12,5 @@ var config = {
   messagingSenderId: "26945234726"
 };
 firebase.initializeApp(config);
+
+//need to create a function for clicking the submit button

@@ -32,5 +32,7 @@ $("#addTrainButton").on("click", function(){
 
   //we need to push the info to firebase for it to retrieve.
 
-  
+  //console log to make sure that info is being retrieved
+
+  //the input information that was inserted needs to be cleared for the next train
 })

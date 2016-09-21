@@ -27,5 +27,10 @@ $("#addTrainButton").on("click", function(){
     name : trainNameInput,
     destination : destinantionInput,
     time: timeInput,
+    frequency : frequencyInput
   }
+
+  //we need to push the info to firebase for it to retrieve.
+
+  
 })

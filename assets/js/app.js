@@ -1,9 +1,9 @@
 //The JS reference is no longer needed
 // alert('The train is coming 1, 2 ,3');
 
-
-firebase application
-Initialize Firebase
+// 
+// firebase application
+// Initialize Firebase
 var config = {
   apiKey: "AIzaSyDChpuTErGfXUtRSDAAWOAMSN8fAoBGb9Y",
   authDomain: "train-schedule-61b08.firebaseapp.com",

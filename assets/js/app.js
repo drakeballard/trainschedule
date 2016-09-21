@@ -11,10 +11,14 @@ var config = {
   storageBucket: "train-schedule-61b08.appspot.com",
   messagingSenderId: "26945234726"
 };
+
 firebase.initializeApp(config);
 
+// the database needs to be defined from firebase
+var database = firebase.database();
+
 //need to create a function for clicking the submit button
-$("#addTrainButton").on("click", function(){
+$("#addTrainBtn").on("click", function(){
   //creating a few train variables that are associated with the text boxes
   var trainNameInput = $("#trainNameInput").val().trim();
   var destinantionInput = $("#destinantionInput").val().trim();
@@ -23,7 +27,7 @@ $("#addTrainButton").on("click", function(){
 
   //creating a new variable that includes all variables above into 1
 
-  var train = {
+  var newTrain = {
     name : trainNameInput,
     destination : destinantionInput,
     time: timeInput,
@@ -31,8 +35,19 @@ $("#addTrainButton").on("click", function(){
   }
 
   //we need to push the info to firebase for it to retrieve.
+  database.ref().push(newTrain);
 
   //console log to make sure that info is being retrieved
+  console.log(newTrain.name);
+  console.log(newTrain.destination);
+  console.log(newTrain.time);
+  console.log(newTrain.frequency);
 
   //the input information that was inserted needs to be cleared for the next train
-})
+  $("#trainNameInput").val("");
+  $("#destinantionInput").val("");
+  $("#timeInput").val("");
+  $("#frequencyInput").val("");
+
+  return false;
+});

@@ -1,7 +1,7 @@
 //The JS reference is no longer needed
 // alert('The train is coming 1, 2 ,3');
 
-// 
+//
 // firebase application
 // Initialize Firebase
 var config = {
@@ -14,3 +14,14 @@ var config = {
 firebase.initializeApp(config);
 
 //need to create a function for clicking the submit button
+$("#addTrainButton").on("click", function(){
+  //creating a few train variables that are associated with the text boxes
+  var trainNameInput = $("#trainNameInput").val().trim();
+  var destinantioInput = $("#destinantioInput").val().trim();
+  var trainInput = $("#trainInput").val().trim();
+  var frequencyInput = $("#frequencyInput").val().trim();
+
+  //creating a new variable that includes all variables above into 1
+
+  var train
+})

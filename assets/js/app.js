@@ -17,11 +17,14 @@ firebase.initializeApp(config);
 $("#addTrainButton").on("click", function(){
   //creating a few train variables that are associated with the text boxes
   var trainNameInput = $("#trainNameInput").val().trim();
-  var destinantioInput = $("#destinantioInput").val().trim();
+  var destinantionInput = $("#destinantionInput").val().trim();
   var trainInput = $("#trainInput").val().trim();
   var frequencyInput = $("#frequencyInput").val().trim();
 
   //creating a new variable that includes all variables above into 1
 
-  var train
+  var train = {
+    name : trainNameInput,
+    destination : destinantionInput
+  }
 })
